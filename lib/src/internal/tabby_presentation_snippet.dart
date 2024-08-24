@@ -1,4 +1,4 @@
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: lines_longer_than_80_chars, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
@@ -60,7 +60,7 @@ class _TabbyPresentationSnippetState extends State<TabbyPresentationSnippet> {
       ),
     );
     _browser.open(
-      url: Uri.parse(
+      url: WebUri(
         '${snippetWebUrls[widget.lang]}'
         '?price=${widget.price}&currency=${widget.currency.displayName}$sdkQuery',
       ),

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:tabby_flutter_inapp_sdk/tabby_flutter_inapp_sdk.dart';
@@ -69,7 +71,7 @@ class _TabbyWebViewState extends State<TabbyWebView> {
         Expanded(
           child: InAppWebView(
             key: webViewKey,
-            initialUrlRequest: URLRequest(url: Uri.parse(widget.webUrl)),
+            initialUrlRequest: URLRequest(url: WebUri(widget.webUrl)),
             initialOptions: options,
             onProgressChanged:
                 (InAppWebViewController controller, int progress) {

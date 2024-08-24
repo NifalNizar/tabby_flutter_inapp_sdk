@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:tabby_flutter_inapp_sdk/src/internal/browser.dart';
@@ -61,10 +63,11 @@ class _TabbyPresentationSnippetNonStantardState
       ),
     );
     _browser.open(
-      url: Uri.parse(
+      url: WebUri(
         '${snippetWebUrls[widget.lang]}'
         '?currency=${widget.currency.displayName}$sdkQuery&installmentsCount=0',
       ),
+      settings: ChromeSafariBrowserSettings(),
       options: ChromeSafariBrowserClassOptions(
         android: AndroidChromeCustomTabsOptions(
             shareState: CustomTabsShareState.SHARE_STATE_OFF),
